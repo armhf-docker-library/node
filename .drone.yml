@@ -1,0 +1,16 @@
+matrix:
+  VERSION:
+    - "4.2.6"
+    - "5.5.0"
+
+publish:
+  docker:
+    file: "$$VERSION/Dockerfile"
+    context: "$$VERSION"
+    username: $$DOCKER_USER
+    email: $$DOCKER_EMAIL
+    password: $$DOCKER_PASSWORD
+    repo: armhfbuild/node
+    tag: "$$VERSION"
+    force_tag: true
+    storage_driver: overlay
