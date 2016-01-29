@@ -1,3 +1,3 @@
-# NodeJS Docker base image for armhf devices
+# Node.js for armhf
 
-Just use the base image at [armhfbuild/node](https://hub.docker.com/r/armhfbuild/node/).
+See [armhfbuild/node](https://hub.docker.com/r/armhfbuild/node/) on Docker Hub.
