@@ -12,4 +12,5 @@ publish:
     tag: "$$VERSION"
     force_tag: true
     storage_driver: overlay
-    build_args: "NODE_VERSION=$$VERSION"
+    build_args: 
+      - NODE_VERSION=$$VERSION
