@@ -6,6 +6,7 @@ matrix:
 
 publish:
   hub_5.5.0:
+    image: armhfplugins/drone-docker
     username: $$DOCKER_USER
     email: $$DOCKER_EMAIL
     password: $$DOCKER_PASSWORD
@@ -22,6 +23,7 @@ publish:
         VERSION: "5.5.0"
 
   hub_5.6.0:
+    image: armhfplugins/drone-docker    
     username: $$DOCKER_USER
     email: $$DOCKER_EMAIL
     password: $$DOCKER_PASSWORD
