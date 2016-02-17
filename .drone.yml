@@ -1,16 +1,40 @@
 matrix:
   VERSION:
-    - "4.2.6"
+    # - "4.2.6"
     - "5.5.0"
+    - "5.6.0"
 
 publish:
-  docker:
+  hub_5.5.0:
     username: $$DOCKER_USER
     email: $$DOCKER_EMAIL
     password: $$DOCKER_PASSWORD
     repo: armhfbuild/node
-    tag: "$$VERSION"
     force_tag: true
     storage_driver: overlay
-    build_args: 
+    build_args:
       - NODE_VERSION=$$VERSION
+    tag:
+      - "5.5.0"
+      - "5.5"
+    when:
+      matrix:
+        VERSION: "5.5.0"
+
+  hub_5.6.0:
+    username: $$DOCKER_USER
+    email: $$DOCKER_EMAIL
+    password: $$DOCKER_PASSWORD
+    repo: armhfbuild/node
+    force_tag: true
+    storage_driver: overlay
+    build_args:
+      - NODE_VERSION=$$VERSION
+    tag:
+      - "5.6.0"
+      - "5.6"
+      - "5"
+      - "latest"
+    when:
+      matrix:
+        VERSION: "5.6.0"
